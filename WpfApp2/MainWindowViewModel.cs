@@ -1,21 +1,22 @@
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Threading.Tasks;
 
-public partial  class MainWindowViewModel : ObservableObject
+public partial class MainWindowViewModel : ObservableObject
 {
-
 
     // Implement command methods here
     [RelayCommand]
     private void Open()
     {
         // Code for opening a file
-       throw new System.Exception();
+        throw new System.Exception();
     }
     [RelayCommand]
     private void Save()
     {
+        Task.Run(() => { throw new System.Exception(); });
         // Code for saving a file
     }
 
